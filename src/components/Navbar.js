@@ -1,4 +1,8 @@
 import logo from './logo.jpg'
+import { IoHomeSharp } from "react-icons/io5";
+import { GoPersonFill } from "react-icons/go";
+import { MdArticle } from "react-icons/md";
+import { Link } from 'react-router-dom';
 const Navbar = ({show}) => {
     console.log("Navbar prop type:", typeof show, show);
     return ( 
@@ -6,10 +10,13 @@ const Navbar = ({show}) => {
             <img src={logo} alt='Logo' className='logo'/>
             <ul>
                 <li>
-                    <a href="/">Profile</a>
+                    <Link to="/"><IoHomeSharp />Home</Link>
                 </li>
                 <li>
-                    <a href="/">Article</a>
+                    <Link to="/Profile"><GoPersonFill />Profile</Link>
+                </li>
+                <li>
+                    <Link to="/Article"><MdArticle />Article</Link>
                 </li>
             </ul>
         </div>

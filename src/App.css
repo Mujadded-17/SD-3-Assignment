@@ -19,7 +19,7 @@ header {
   height: 95vh;
   padding: 0 30px;
   left: -100%;
-  transition: 0.3s;
+  transition: 1s;
 }
 
 .sidenav.active{
@@ -29,7 +29,7 @@ header {
   height: 95vh;
   padding: 0 30px;
   left: 0%;
-  transition: 0.3s;
+  transition: 1s;
 }
 
 .logo {
@@ -63,6 +63,17 @@ ul li a:active{
   background-color: #172b4d;
 }
 
+ul li a svg{
+  margin-right: 10px;
+}
+
 header svg{
   font-size: 40px;
+}
+
+main{
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
 }
