@@ -6,6 +6,7 @@ import Profile from "./components/pages/Profile";
 import Article from "./components/pages/Article";
 import './App.css';
 import Navbar from './components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [showNav, setShowNav]=useState(false);
@@ -18,7 +19,13 @@ function App() {
       </header>
       <Navbar show={showNav}/>
 
-      <div className="App">
+      <div
+          className="main"
+          style={{
+            marginLeft: showNav ? '250px' : '0', // change this to match your Navbar width
+            transition: 'margin-left 1s ease',
+          }}
+        >
         <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Profile' element={<Profile/>}></Route>
