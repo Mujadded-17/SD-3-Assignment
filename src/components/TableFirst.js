@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
-import { Pagination } from "react-bootstrap";
+import { Pagination, Badge } from "react-bootstrap";
 
 const TableFirst = () => {
   // Sample data
@@ -27,6 +27,17 @@ const TableFirst = () => {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+  };
+
+  // Function to render status badge
+  const renderStatusBadge = (status) => {
+    if (status === "Published") {
+      return <Badge bg="success" pill>{status}</Badge>; // Green
+    } else if (status === "Draft") {
+      return <Badge bg="warning" pill text="dark">{status}</Badge>; // Yellow with dark text
+    } else {
+      return <Badge bg="secondary" pill>{status}</Badge>; // Fallback gray
+    }
   };
 
   return (
@@ -74,7 +85,7 @@ const TableFirst = () => {
           }
         `}
       </style>
-
+          <h1>MY Articles</h1>
       <Table striped hover>
         <thead>
           <tr>
@@ -87,7 +98,7 @@ const TableFirst = () => {
           {currentItems.map((item, index) => (
             <tr key={index}>
               <td>{item.title}</td>
-              <td>{item.status}</td>
+              <td>{renderStatusBadge(item.status)}</td>
               <td>{item.edited}</td>
             </tr>
           ))}

@@ -2,7 +2,9 @@ import TableFirst from "../TableFirst";
 const Article = () => {
     return (
         <>
-        <h1>MY Articles</h1>
+        <br></br>
+        <br></br>
+        <br></br>
         <TableFirst></TableFirst>
         </>
     );
