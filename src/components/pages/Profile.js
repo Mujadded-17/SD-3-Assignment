@@ -1,29 +1,62 @@
 import React from "react";
-//import "./profile.css"; // Optional if you want a separate CSS file, otherwise paste in App.css
+
 
 const Profile = () => {
-    // Sample user data
-    const user = {
-        fullName: "Mujadded Chowdhury",
-        email: "mujadded@aust.edu",
-        profilePic: "https://via.placeholder.com/150", // placeholder image
-        joinedDate: "21-08-2024"
-    };
-
-    return (
-        <div className="profile-container">
-            <div className="profile-card">
-                <img 
-                    src={user.profilePic} 
-                    alt="Profile" 
-                    className="profile-pic"
-                />
-                <h2 className="profile-name">{user.fullName}</h2>
-                <p className="profile-email">{user.email}</p>
-                <p className="profile-joined">Joined: {user.joinedDate}</p>
-            </div>
+  return (
+    <div className="profile-page">
+      {/* Top Section */}
+      <div className="profile-header">
+        <div className="profile-avatar">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Profile"
+          />
         </div>
-    );
-}
+        <div className="profile-info">
+          <h2>John Doe</h2>
+          <p className="profile-email">
+            <a href="mailto:ryan@rockettheme.com">ryan@rockettheme.com</a> - Administrator
+          </p>
+          <p className="profile-subtext">
+            Avatar by <a href="https://gravatar.com">gravatar.com</a>. Or upload your own…
+          </p>
+          <div className="upload-box">
+            Drop your files here or <span>click in this area</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Form Section */}
+      <div className="profile-form">
+        <h3>Account</h3>
+        <form>
+          <label>Username</label>
+          <input type="text" value="ryan" readOnly />
+
+          <label>Email <span className="required">*</span></label>
+          <input type="email" value="ryan@example.com" />
+
+          <label>Password</label>
+          <input type="password" value="********" />
+
+          <label>Full Name</label>
+          <input type="text" value="John Doe" />
+
+          <label>Title</label>
+          <input type="text" value="Administrator" />
+
+          <label>Language</label>
+          <select>
+            <option>English</option>
+            <option>Spanish</option>
+            <option>French</option>
+          </select>
+
+          <button type="submit" className="save-btn">Save</button>
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default Profile;
