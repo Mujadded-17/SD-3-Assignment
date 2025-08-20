@@ -40,6 +40,14 @@ header {
   padding-top: 10px;
 }
 
+p {
+  font-size: 16px;
+  color: #f3eeee;
+  line-height: 1.6;
+  padding: 2px;
+  border: #172b4d;
+}
+
 ul{
   padding: 0px;
 }
@@ -71,6 +79,10 @@ header svg{
   font-size: 40px;
 }
 
-
+.main {
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
 
 

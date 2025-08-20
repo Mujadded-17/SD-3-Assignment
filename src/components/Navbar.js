@@ -8,6 +8,8 @@ const Navbar = ({show}) => {
     return ( 
         <div className={show ? "sidenav active" : "sidenav"}>
             <img src={logo} alt='Logo' className='logo'/>
+            <p>Mujadded Chowdhury</p>
+            <p>mujaddedc@gmail.com</p>
             <ul>
                 <li>
                     <Link to="/"><IoHomeSharp />Home</Link>

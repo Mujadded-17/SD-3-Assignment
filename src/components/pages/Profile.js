@@ -85,7 +85,6 @@ const ProfilePage = () => {
 
           .profile-section a:hover {
             text-decoration: underline;
-            color: #a7a2a2ff;
           }
         `}
       </style>
@@ -94,7 +93,7 @@ const ProfilePage = () => {
         {/* Profile Picture */}
         <div className="profile-avatar">
           <img
-            src="./logo.jpg"
+            src={logo}
             alt="Profile"
           />
         </div>
